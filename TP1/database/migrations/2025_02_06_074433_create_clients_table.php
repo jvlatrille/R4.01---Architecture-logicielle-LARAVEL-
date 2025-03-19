@@ -9,7 +9,10 @@ return new class extends Migration {
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id('NumeroClient');
+            $table->string('prenom');
             $table->string('nom');
+            $table->string(column: 'age');
+            $table->string('adresse');
             $table->string('email')->unique();
             $table->string('carteBancaire')->nullable();
             $table->timestamps();

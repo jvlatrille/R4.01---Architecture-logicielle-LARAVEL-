@@ -10,11 +10,14 @@ class Client extends Model {
 
     protected $table = 'clients';
     protected $primaryKey = 'numeroClient';
-    protected $fillable = ['nom', 'email', 'carteBancaire'];
-
+    protected $fillable = ['prenom', 'nom', 'age', 'email', 'adresse', 'carteBancaire'];
     protected $casts = [
+        'numeroClient' => 'integer',
+        'prenom' => 'string',
         'nom' => 'string',
+        'age' => 'integer',
         'email' => 'string',
+        'adresse' => 'string',
         'carteBancaire' => 'string'
     ];
 

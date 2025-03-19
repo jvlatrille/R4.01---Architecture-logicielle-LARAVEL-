@@ -17,7 +17,10 @@ class ClientFactory extends Factory
     public function definition(): array
     {
         return [
+            'prenom' => $this->faker->name(),
             'nom' => $this->faker->name(),
+            'age' => $this->faker->numberBetween($min = 18, $max = 100),
+            'adresse' => $this->faker->address(),
             'email' => $this->faker->unique()->safeEmail(),
             'carteBancaire' => $this->faker->creditCardNumber()
         ];
