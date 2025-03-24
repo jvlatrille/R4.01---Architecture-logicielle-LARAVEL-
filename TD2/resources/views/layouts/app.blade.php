@@ -13,9 +13,10 @@
             font-weight: bold;
             display: flex;
             align-items: center;
+            margin: 0 auto;  /* Center the navbar-brand */
         }
         .navbar-brand img {
-            height: 40px;
+            height: 80px;  /* Increased from 40px to 80px */
             margin-right: 10px;
         }
         .hot-takes-title {
@@ -33,7 +34,20 @@
             max-height: 250px;
             object-fit: contain;
         }
+        
+        /* Adjust navbar layout for centered logo */
+        .navbar .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Move the navigation links below the logo */
+        .navbar-nav {
+            margin-top: 10px;
+        }
     </style>
+
 </head>
 <body>
 
@@ -43,7 +57,7 @@
             <!-- Logo et titre -->
             <a class="navbar-brand" href="{{ route('sauces.index') }}">
                 <!-- Mettez ici le chemin de votre logo si vous en avez un -->
-                <img src="C:\Users\Jules\OneDrive\Pictures\pfp Soul Eater fond noir.png" alt="Hot Takes Logo">
+                <img src="https://images.squarespace-cdn.com/content/5c6ae13e8dfc8ca6f2c0d885/1550531492206-NJTJCB40L3SCMYNKE490/HOT+TAKES-logo-black.png?format=1500w&content-type=image%2Fpng" alt="Hot Takes Logo">
                 <div>
                     <div class="hot-takes-title">HOT TAKES</div>
                     <div class="hot-takes-subtitle">The web's best hot sauce reviews</div>
